@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "a8a5c2ca-29e5-4c95-8331-925d635ececc",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20057135"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"User creation was successful\", function () {",
+							"  var jsonData = pm.response.json();",
+							"  pm.environment.set(\"user_id\", jsonData._id);",
+							"  pm.environment.set(\"shippingAddress_id\", jsonData._id);",
+							"  pm.expect(pm.response.code).to.equal(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"USER NAME CREATE\",\n    \"email\": \"user@test.com\",\n    \"password\": \"test\",\n    \"shippingAddress\": {\n        \"address\": \"108 University Avenue\",\n        \"city\": \"Waterloo\",\n        \"province\": \"ON\",\n        \"postalCode\": \"N2J 2W2\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{user_url}}/signup",
+					"host": [
+						"{{user_url}}"
+					],
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadUsers",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Request is successful with a status code of 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Check that it returns an array\", function () {",
+							"  var jsonData = pm.response.json();",
+							"  pm.expect(jsonData).to.be.an(\"array\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{user_url}}/",
+					"host": [
+						"{{user_url}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadUserById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Request is successful with a status code of 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Check that it returns an array\", function () {",
+							"  var jsonData = pm.response.json()[\"body\"];",
+							"  pm.expect(jsonData).to.be.an(\"array\");",
+							"});",
+							"",
+							"pm.test(\"Check that itemCount is correct\", function () {",
+							"  var itemCount = pm.response.json()[\"itemCount\"];",
+							"  var jsonData = pm.response.json()[\"body\"];",
+							"  pm.expect(jsonData.length).to.equal(itemCount);",
+							"});",
+							"",
+							"pm.test(\"Check that id returned is correct\", function () {",
+							"  var jsonData = pm.response.json()[\"body\"];",
+							"  pm.expect(parseInt(jsonData[0].id)).to.equal(pm.environment.get(\"user_id\"));",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{user_url}}/read.php/?id={{user_id}}",
+					"host": [
+						"{{user_url}}"
+					],
+					"path": [
+						"read.php",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{user_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Request is successful with a status code of 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Check that it returns an array\", function () {",
+							"  var jsonData = pm.response.json()[\"body\"];",
+							"  pm.expect(jsonData).to.be.an(\"array\");",
+							"});",
+							"",
+							"pm.test(\"Check that itemCount is correct\", function () {",
+							"  var itemCount = pm.response.json()[\"itemCount\"];",
+							"  var jsonData = pm.response.json()[\"body\"];",
+							"  pm.expect(jsonData.length).to.equal(itemCount);",
+							"});",
+							"",
+							"pm.test(\"Check that id returned is correct\", function () {",
+							"  var jsonData = pm.response.json()[\"body\"];",
+							"  pm.expect(parseInt(jsonData[0].id)).to.equal(pm.environment.get(\"user_id\"));",
+							"});",
+							"",
+							"pm.test(\"Check that name was updated correctly\", function () {",
+							"  var jsonData = pm.response.json()[\"body\"];",
+							"  pm.expect(jsonData[0].name).to.equal(pm.environment.get(\"user_name_update\"));",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{user_url}}/read.php/?id={{user_id}}",
+					"host": [
+						"{{user_url}}"
+					],
+					"path": [
+						"read.php",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{user_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"User updated successfully\", function () {",
+							"  pm.expect(pm.response.code).to.be.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": {{user_id}},\n    \"name\": \"USER NAME UPDATE\",\n    \"email\": \"user@test.com\",\n    \"password\": \"test\",\n    \"shippingAddress\": {\n        \"address\": \"108 University Avenue\",\n        \"city\": \"Waterloo\",\n        \"province\": \"ON\",\n        \"postalCode\": \"N2J 2W2\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{user_url}}/edit",
+					"host": [
+						"{{user_url}}"
+					],
+					"path": [
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Request is successful with a status code of 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{user_url}}/delete.php/?id={{user_id}}",
+					"host": [
+						"{{user_url}}"
+					],
+					"path": [
+						"delete.php",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{user_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadUserByIdAfterDelete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check if Not Found Code is returned\", function () {",
+							"  pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{user_url}}/{{user_id}}",
+					"host": [
+						"{{user_url}}"
+					],
+					"path": [
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

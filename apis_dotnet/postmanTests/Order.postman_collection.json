@@ -1,0 +1,391 @@
+{
+	"info": {
+		"_postman_id": "8d9cb46c-5910-4d99-a85a-0576d994c255",
+		"name": "Order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Setup",
+			"item": [
+				{
+					"name": "CreateUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"User creation was successful\", function () {",
+									"  var jsonData = pm.response.json();",
+									"  pm.environment.set(\"user_id\", jsonData.id);",
+									"  pm.expect(pm.response.code).to.equal(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"USER NAME CREATE\",\n    \"email\": \"user@test.com\",\n    \"password\": \"test\",\n    \"shippingAddress\": \"108 University Avenue, Waterloo, ON, Canada\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{user_url}}",
+							"host": [
+								"{{user_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateProduct 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Product creation was successful\", function () {",
+									"  var jsonData = pm.response.json();",
+									"  pm.environment.set(\"product_id\", jsonData.id);",
+									"  pm.expect(pm.response.code).to.equal(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"PRODUCT NAME CREATE\",\n    \"description\": \"This is an incredible test!\",\n    \"image\": \"test_product.jpeg\",\n    \"price\": 500,\n    \"shippingCost\": 10,\n    \"brand\": \"Test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product_url}}",
+							"host": [
+								"{{product_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateProduct 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Product creation was successful\", function () {",
+									"  var jsonData = pm.response.json();",
+									"  pm.environment.set(\"product_id_2\", jsonData.id);",
+									"  pm.expect(pm.response.code).to.equal(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"PRODUCT NAME CREATE\",\n    \"description\": \"This is an incredible test!\",\n    \"image\": \"test_product.jpeg\",\n    \"price\": 500,\n    \"shippingCost\": 10,\n    \"brand\": \"Test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product_url}}",
+							"host": [
+								"{{product_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddProduct1ToCart",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Product added to cart successfully\", function () {",
+									"  pm.expect(pm.response.code).to.equal(201);",
+									"});",
+									"",
+									"pm.test(\"Check that product was added correctly\", function () {",
+									"  var jsonData = pm.response.json();",
+									"  pm.expect(jsonData.productId).to.equal(parseInt(pm.environment.get(\"product_id\")));",
+									"  pm.expect(jsonData.userId).to.equal(pm.environment.get(\"user_id\"));",
+									"  pm.expect(jsonData.quantity).to.equal(pm.environment.get(\"cart_product_init_qty\"));",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": {{user_id}},\n    \"productId\": {{product_id}},\n    \"quantity\": {{cart_product_init_qty}}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{cart_url}}",
+							"host": [
+								"{{cart_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddProduct2ToCart",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Product added to cart successfully\", function () {",
+									"  pm.expect(pm.response.code).to.equal(201);",
+									"});",
+									"",
+									"pm.test(\"Check that product was added correctly\", function () {",
+									"  var jsonData = pm.response.json();",
+									"  pm.expect(jsonData.productId).to.equal(parseInt(pm.environment.get(\"product_id_2\")));",
+									"  pm.expect(jsonData.userId).to.equal(pm.environment.get(\"user_id\"));",
+									"  pm.expect(parseInt(jsonData.quantity)).to.equal(parseInt(pm.environment.get(\"cart_product_init_qty\")));",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": {{user_id}},\n    \"productId\": {{product_id_2}},\n    \"quantity\": {{cart_product_init_qty}}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{cart_url}}",
+							"host": [
+								"{{cart_url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CreateOrderByCart",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Order creation was successful\", function () {",
+							"  var jsonData = pm.response.json();",
+							"  pm.environment.set(\"order_id\", jsonData.id);",
+							"  pm.expect(pm.response.code).to.equal(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{order_url}}/user/{{user_id}}",
+					"host": [
+						"{{order_url}}"
+					],
+					"path": [
+						"user",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadOrderById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Request is successful with a status code of 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Check that it returns an array\", function () {",
+							"  var jsonData = pm.response.json()[\"body\"];",
+							"  pm.expect(jsonData).to.be.an(\"array\");",
+							"});",
+							"",
+							"pm.test(\"Check that id is correct\", function () {",
+							"  var jsonData = pm.response.json();",
+							"  pm.expect(jsonData.id).to.equal(pm.environment.get(\"order_id\"));",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{order_url}}/{{order_id}}",
+					"host": [
+						"{{order_url}}"
+					],
+					"path": [
+						"{{order_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadOrderByUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Request is successful with a status code of 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Check that user id is correct\", function () {",
+							"  var jsonData = pm.response.json();",
+							"  var userIsCorrect = true;",
+							"  jsonData.forEach(data => {",
+							"    if(data.userId != pm.environment.get(\"user_id\")){",
+							"        userIsCorrect = false;",
+							"    }",
+							"  });",
+							"  pm.expect(userIsCorrect).to.be.true;",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{order_url}}/user/{{user_id}}",
+					"host": [
+						"{{order_url}}"
+					],
+					"path": [
+						"user",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CancelOrder",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Request is successful with a status code of 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Check that order is canceled\", function () {",
+							"  var jsonData = pm.response.json();",
+							"  pm.expect(jsonData.status).to.equal(\"CANCELED\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{order_url}}/{{order_id}}",
+					"host": [
+						"{{order_url}}"
+					],
+					"path": [
+						"{{order_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

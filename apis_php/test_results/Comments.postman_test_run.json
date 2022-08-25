@@ -1,0 +1,771 @@
+{
+	"id": "8f169547-4b0f-4786-8e1a-811775230b21",
+	"name": "Comments",
+	"timestamp": "2022-07-06T18:33:02.951Z",
+	"collection_id": "20057135-01f7e43e-553f-4f17-81e6-299879f7cba8",
+	"folder_id": 0,
+	"environment_id": "20057135-5739fff1-03fe-4f20-aa1b-35ccfeba8c9b",
+	"totalPass": 38,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "4ce89101-447e-40e3-9c14-095fbefc2a22",
+			"name": "CreateUser",
+			"url": "http://localhost/prog8185w4/api/user/create.php",
+			"time": 5,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"User creation was successful": true
+			},
+			"testPassFailCounts": {
+				"User creation was successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"User creation was successful": true
+				}
+			]
+		},
+		{
+			"id": "e674d5e2-d8f6-4fdd-8d53-c8d5fb13569c",
+			"name": "CreateUser2",
+			"url": "http://localhost/prog8185w4/api/user/create.php",
+			"time": 5,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"User creation was successful": true
+			},
+			"testPassFailCounts": {
+				"User creation was successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"User creation was successful": true
+				}
+			]
+		},
+		{
+			"id": "c275f485-d83c-4f46-8129-44d2feba3194",
+			"name": "ReadUsers",
+			"url": "http://localhost/prog8185w4/api/user/read.php",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true,
+				"Check that it returns an array": true,
+				"Check that itemCount is correct": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that it returns an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that itemCount is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true,
+					"Check that it returns an array": true,
+					"Check that itemCount is correct": true
+				}
+			]
+		},
+		{
+			"id": "e82a12cf-1791-4b01-b19f-e9bf0cb92727",
+			"name": "CreateProduct 1",
+			"url": "http://localhost/prog8185w4/api/product/create.php",
+			"time": 4,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Product creation was successful": true
+			},
+			"testPassFailCounts": {
+				"Product creation was successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Product creation was successful": true
+				}
+			]
+		},
+		{
+			"id": "5b32fddd-edd3-4106-b625-6e43bb11bfc3",
+			"name": "CreateProduct 2",
+			"url": "http://localhost/prog8185w4/api/product/create.php",
+			"time": 15,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Product creation was successful": true
+			},
+			"testPassFailCounts": {
+				"Product creation was successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Product creation was successful": true
+				}
+			]
+		},
+		{
+			"id": "4de089d3-28a1-4e25-b8af-6b1563f71fac",
+			"name": "ReadProducts",
+			"url": "http://localhost/prog8185w4/api/product/read.php",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true,
+				"Check that it returns an array": true,
+				"Check that itemCount is correct": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that it returns an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that itemCount is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true,
+					"Check that it returns an array": true,
+					"Check that itemCount is correct": true
+				}
+			]
+		},
+		{
+			"id": "5474024e-4a71-4cc4-a57a-ce55284ed793",
+			"name": "CreateCommentProduct1",
+			"url": "http://localhost/prog8185w4/api/comments/create.php",
+			"time": 7,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"User creation was successful": true
+			},
+			"testPassFailCounts": {
+				"User creation was successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"User creation was successful": true
+				}
+			]
+		},
+		{
+			"id": "1f785b22-0245-482b-8d40-dd1b96487092",
+			"name": "CreateCommentProduct2",
+			"url": "http://localhost/prog8185w4/api/comments/create.php",
+			"time": 4,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"User creation was successful": true
+			},
+			"testPassFailCounts": {
+				"User creation was successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"User creation was successful": true
+				}
+			]
+		},
+		{
+			"id": "c7869e45-1b94-4012-bc59-a09edcaab9e5",
+			"name": "CreateCommentProduct1User2",
+			"url": "http://localhost/prog8185w4/api/comments/create.php",
+			"time": 4,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"User creation was successful": true
+			},
+			"testPassFailCounts": {
+				"User creation was successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"User creation was successful": true
+				}
+			]
+		},
+		{
+			"id": "4b16589f-2506-4be5-8e26-f42fbff24dd8",
+			"name": "ReadComments",
+			"url": "http://localhost/prog8185w4/api/comments/read.php",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true,
+				"Check that it returns an array": true,
+				"Check that itemCount is correct": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that it returns an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that itemCount is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true,
+					"Check that it returns an array": true,
+					"Check that itemCount is correct": true
+				}
+			]
+		},
+		{
+			"id": "69948b0f-6a14-4487-b256-03a4e6d5fb81",
+			"name": "ReadCommentsByUser",
+			"url": "http://localhost/prog8185w4/api/comments/read-user.php/?user=54",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true,
+				"Check that it returns an array": true,
+				"Check that itemCount is correct": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that it returns an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that itemCount is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true,
+					"Check that it returns an array": true,
+					"Check that itemCount is correct": true
+				}
+			]
+		},
+		{
+			"id": "cab30bdf-3d24-4a18-bf78-5547a8e8060b",
+			"name": "ReadCommentsByProduct",
+			"url": "http://localhost/prog8185w4/api/comments/read-product.php/?product=85",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true,
+				"Check that it returns an array": true,
+				"Check that itemCount is correct": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that it returns an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that itemCount is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true,
+					"Check that it returns an array": true,
+					"Check that itemCount is correct": true
+				}
+			]
+		},
+		{
+			"id": "36d9549b-8f07-4c0c-9d1a-d32f3b2160ab",
+			"name": "ReadCommentById",
+			"url": "http://localhost/prog8185w4/api/comments/read.php/?id=30",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true,
+				"Check that it returns an array": true,
+				"Check that itemCount is correct": true,
+				"Check that id returned is correct": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that it returns an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that itemCount is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that id returned is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true,
+					"Check that it returns an array": true,
+					"Check that itemCount is correct": true,
+					"Check that id returned is correct": true
+				}
+			]
+		},
+		{
+			"id": "808d7139-eca9-4cc9-bcff-85ff9e3af380",
+			"name": "UpdateComment",
+			"url": "http://localhost/prog8185w4/api/comments/update.php/?id=30",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"User updated successfully": true
+			},
+			"testPassFailCounts": {
+				"User updated successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"User updated successfully": true
+				}
+			]
+		},
+		{
+			"id": "a5c2551e-4cd9-4f00-a224-6c0062fcde30",
+			"name": "ReadCommentByIdAfterUpdate",
+			"url": "http://localhost/prog8185w4/api/comments/read.php/?id=30",
+			"time": 19,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true,
+				"Check that it returns an array": true,
+				"Check that itemCount is correct": true,
+				"Check that id returned is correct": true,
+				"Check that comment was updated correctly": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that it returns an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that itemCount is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that id returned is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that comment was updated correctly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				19
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true,
+					"Check that it returns an array": true,
+					"Check that itemCount is correct": true,
+					"Check that id returned is correct": true,
+					"Check that comment was updated correctly": true
+				}
+			]
+		},
+		{
+			"id": "c9cfb727-ad81-45f3-9b5d-e68f53cad0a5",
+			"name": "DeleteCommentById",
+			"url": "http://localhost/prog8185w4/api/comments/delete.php/?id=30",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true
+				}
+			]
+		},
+		{
+			"id": "f5bf6432-5da6-4f21-98e4-7617ca47e1c9",
+			"name": "ReadCommentByIdAfterDelete",
+			"url": "http://localhost/prog8185w4/api/comments/read.php/?id=30",
+			"time": 4,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Request returns status code of 404": true
+			},
+			"testPassFailCounts": {
+				"Request returns status code of 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Request returns status code of 404": true
+				}
+			]
+		},
+		{
+			"id": "653610e1-10c3-447b-98ac-225b786f2754",
+			"name": "DeleteCommentByUser",
+			"url": "http://localhost/prog8185w4/api/comments/delete-user.php/?user=54",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true
+				}
+			]
+		},
+		{
+			"id": "b51d3c90-38f3-47f0-88fe-5231ae4cd8bf",
+			"name": "ReadCommentsByUserAfterDelete",
+			"url": "http://localhost/prog8185w4/api/comments/read-user.php/?user=54",
+			"time": 4,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Request returns status code of 404": true
+			},
+			"testPassFailCounts": {
+				"Request returns status code of 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Request returns status code of 404": true
+				}
+			]
+		},
+		{
+			"id": "271712a8-7890-4239-92c2-1ed5e7bf4b62",
+			"name": "DeleteCommentByProduct",
+			"url": "http://localhost/prog8185w4/api/comments/delete-product.php/?product=85",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true
+				}
+			]
+		},
+		{
+			"id": "269dfdc9-3317-4232-9470-5e15830cf8ab",
+			"name": "ReadCommentsByProductAfterDelete",
+			"url": "http://localhost/prog8185w4/api/comments/read-product.php/?product=85",
+			"time": 5,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Request returns status code of 404": true
+			},
+			"testPassFailCounts": {
+				"Request returns status code of 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Request returns status code of 404": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 125,
+	"collection": {
+		"requests": [
+			{
+				"id": "4ce89101-447e-40e3-9c14-095fbefc2a22",
+				"method": "PUT"
+			},
+			{
+				"id": "e674d5e2-d8f6-4fdd-8d53-c8d5fb13569c",
+				"method": "PUT"
+			},
+			{
+				"id": "c275f485-d83c-4f46-8129-44d2feba3194",
+				"method": "GET"
+			},
+			{
+				"id": "e82a12cf-1791-4b01-b19f-e9bf0cb92727",
+				"method": "PUT"
+			},
+			{
+				"id": "5b32fddd-edd3-4106-b625-6e43bb11bfc3",
+				"method": "PUT"
+			},
+			{
+				"id": "4de089d3-28a1-4e25-b8af-6b1563f71fac",
+				"method": "GET"
+			},
+			{
+				"id": "5474024e-4a71-4cc4-a57a-ce55284ed793",
+				"method": "PUT"
+			},
+			{
+				"id": "1f785b22-0245-482b-8d40-dd1b96487092",
+				"method": "PUT"
+			},
+			{
+				"id": "c7869e45-1b94-4012-bc59-a09edcaab9e5",
+				"method": "PUT"
+			},
+			{
+				"id": "4b16589f-2506-4be5-8e26-f42fbff24dd8",
+				"method": "GET"
+			},
+			{
+				"id": "69948b0f-6a14-4487-b256-03a4e6d5fb81",
+				"method": "GET"
+			},
+			{
+				"id": "cab30bdf-3d24-4a18-bf78-5547a8e8060b",
+				"method": "GET"
+			},
+			{
+				"id": "36d9549b-8f07-4c0c-9d1a-d32f3b2160ab",
+				"method": "GET"
+			},
+			{
+				"id": "808d7139-eca9-4cc9-bcff-85ff9e3af380",
+				"method": "POST"
+			},
+			{
+				"id": "a5c2551e-4cd9-4f00-a224-6c0062fcde30",
+				"method": "GET"
+			},
+			{
+				"id": "c9cfb727-ad81-45f3-9b5d-e68f53cad0a5",
+				"method": "DELETE"
+			},
+			{
+				"id": "f5bf6432-5da6-4f21-98e4-7617ca47e1c9",
+				"method": "GET"
+			},
+			{
+				"id": "653610e1-10c3-447b-98ac-225b786f2754",
+				"method": "DELETE"
+			},
+			{
+				"id": "b51d3c90-38f3-47f0-88fe-5231ae4cd8bf",
+				"method": "GET"
+			},
+			{
+				"id": "271712a8-7890-4239-92c2-1ed5e7bf4b62",
+				"method": "DELETE"
+			},
+			{
+				"id": "269dfdc9-3317-4232-9470-5e15830cf8ab",
+				"method": "GET"
+			}
+		]
+	}
+}

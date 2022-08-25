@@ -1,0 +1,63 @@
+To Start the project
+npm init -y
+npm i express
+npm i --save-dev nodemon
+
+On package.json change the "node" to "nodemon" at "start" parameter
+
+Write the server.js file
+
+To run the server type: npm run start
+
+npm i ejs
+
+create public and views folder
+move index.html to views
+change the .html to .ejs in the index file
+
+All the sensitive information should be stored in the .env file
+  - port, database stuff...
+npm i dotenv
+We will use this package to read the info from .env file
+This is not supposed to go to production, so we create a file config.js and use the dotenv in there.
+RUN npm i --save-dev dotenv to move the dependency to the devDependencies
+Remove the import of dotenv from config and now we will start our server like this:
+node -r dotenv/config server
+This will automatically understand that all the variables inside of config is global and will fill them using .env
+To not type this command everytime, we add this in the start propertie in the package.json
+"start": "nodemon -r dotenv/config server.js"
+This way, we can continue usgin npm run start to start our server
+
+For the auth
+npm i jsonwebtoken
+npm i cookie-parser
+
+---
+
+HASH PASSWORDS
+npm i bcrypt
+--
+
+Middleware to validate inputs
+
+npm i express-validator
+-- 
+
+MONGODB
+
+TO INSTALL MONGODB ON MAC
+brew tap mongodb/brew
+brew install mongodb-community
+
+TO START MONGO DB
+brew services start mongodb-community
+
+To use mongo with node:
+npm i mongoose
+
+To configure the connection string with the data base, use the .env file
+DB_URI=mogodb://localhost:27017/ecommerce
+we need to export it in the config.js file
+dbUri: process.env.DB_URI
+In the server.js:
+const mongoose = require("mongoose");

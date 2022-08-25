@@ -1,0 +1,616 @@
+{
+	"id": "1af666d5-1b8b-4dd0-b811-1e2b224a0b4b",
+	"name": "Cart",
+	"timestamp": "2022-07-06T18:33:21.410Z",
+	"collection_id": "20057135-35fd49a7-99a1-4675-aba9-3631d813dc1a",
+	"folder_id": 0,
+	"environment_id": "20057135-5739fff1-03fe-4f20-aa1b-35ccfeba8c9b",
+	"totalPass": 33,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "d3666413-34ad-406e-a026-97b7f349be51",
+			"name": "CreateUser",
+			"url": "http://localhost/prog8185w4/api/user/create.php",
+			"time": 9,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"User creation was successful": true
+			},
+			"testPassFailCounts": {
+				"User creation was successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"User creation was successful": true
+				}
+			]
+		},
+		{
+			"id": "099fa622-b7c6-425f-9ddf-b09da0edc944",
+			"name": "ReadUsers",
+			"url": "http://localhost/prog8185w4/api/user/read.php",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true,
+				"Check that it returns an array": true,
+				"Check that itemCount is correct": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that it returns an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that itemCount is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true,
+					"Check that it returns an array": true,
+					"Check that itemCount is correct": true
+				}
+			]
+		},
+		{
+			"id": "ab2fa0db-6c08-4ab0-8e38-01357bec2b6e",
+			"name": "CreateProduct 1",
+			"url": "http://localhost/prog8185w4/api/product/create.php",
+			"time": 19,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Product creation was successful": true
+			},
+			"testPassFailCounts": {
+				"Product creation was successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				19
+			],
+			"allTests": [
+				{
+					"Product creation was successful": true
+				}
+			]
+		},
+		{
+			"id": "c4392d0a-c369-4104-b72b-c951c7fa246e",
+			"name": "CreateProduct 2",
+			"url": "http://localhost/prog8185w4/api/product/create.php",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Product creation was successful": true
+			},
+			"testPassFailCounts": {
+				"Product creation was successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Product creation was successful": true
+				}
+			]
+		},
+		{
+			"id": "9cf18e3e-9ef8-440b-9e40-26a016dd0498",
+			"name": "ReadProducts",
+			"url": "http://localhost/prog8185w4/api/product/read.php",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true,
+				"Check that it returns an array": true,
+				"Check that itemCount is correct": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that it returns an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that itemCount is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true,
+					"Check that it returns an array": true,
+					"Check that itemCount is correct": true
+				}
+			]
+		},
+		{
+			"id": "9dda426b-2abe-4bae-ab48-83861319aeb6",
+			"name": "AddProduct1ToCart",
+			"url": "http://localhost/prog8185w4/api/cart/add-product.php",
+			"time": 18,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Product added to cart successfully": true
+			},
+			"testPassFailCounts": {
+				"Product added to cart successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				18
+			],
+			"allTests": [
+				{
+					"Product added to cart successfully": true
+				}
+			]
+		},
+		{
+			"id": "d719efb5-289d-4414-9453-c21067d1302d",
+			"name": "AddProduct2ToCart",
+			"url": "http://localhost/prog8185w4/api/cart/add-product.php",
+			"time": 12,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Product added to cart successfully": true
+			},
+			"testPassFailCounts": {
+				"Product added to cart successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Product added to cart successfully": true
+				}
+			]
+		},
+		{
+			"id": "5239e4de-05d8-4c41-aa0f-a9b145bac961",
+			"name": "ReadCartByUser",
+			"url": "http://localhost/prog8185w4/api/cart/read-user-cart.php/?user=54",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true,
+				"Check that it returns an user": true,
+				"Check that itemCount is correct": true,
+				"Check that product quantity is correct": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that it returns an user": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that itemCount is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that product quantity is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true,
+					"Check that it returns an user": true,
+					"Check that itemCount is correct": true,
+					"Check that product quantity is correct": true
+				}
+			]
+		},
+		{
+			"id": "252178bb-3f5e-46a8-9963-5381721d0b41",
+			"name": "AddSameProductToCart",
+			"url": "http://localhost/prog8185w4/api/cart/add-product.php",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Product quantity updated successfully": true
+			},
+			"testPassFailCounts": {
+				"Product quantity updated successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Product quantity updated successfully": true
+				}
+			]
+		},
+		{
+			"id": "73d4ccde-874e-443e-8596-427dbcd6f471",
+			"name": "ReadCartByUserAfterAddingSameProduct",
+			"url": "http://localhost/prog8185w4/api/cart/read-user-cart.php/?user=54",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true,
+				"Check that it returns an user": true,
+				"Check that itemCount is correct": true,
+				"Check that product quantity is correct": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that it returns an user": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that itemCount is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that product quantity is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true,
+					"Check that it returns an user": true,
+					"Check that itemCount is correct": true,
+					"Check that product quantity is correct": true
+				}
+			]
+		},
+		{
+			"id": "4caf8a7b-fca3-455c-b30d-d192f201304a",
+			"name": "ChangeProductQuantity",
+			"url": "http://localhost/prog8185w4/api/cart/change-product-quantity.php",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Product quantity updated successfully": true
+			},
+			"testPassFailCounts": {
+				"Product quantity updated successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Product quantity updated successfully": true
+				}
+			]
+		},
+		{
+			"id": "e8ada151-ef1d-4111-9ded-e833acc1014b",
+			"name": "ReadCartByUserAfterChangingQuantity",
+			"url": "http://localhost/prog8185w4/api/cart/read-user-cart.php/?user=54",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true,
+				"Check that it returns an user": true,
+				"Check that itemCount is correct": true,
+				"Check that product quantity is correct": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that it returns an user": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that itemCount is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that product quantity is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true,
+					"Check that it returns an user": true,
+					"Check that itemCount is correct": true,
+					"Check that product quantity is correct": true
+				}
+			]
+		},
+		{
+			"id": "6b2cfb31-4ee9-4ec7-b395-46a22b9f13ae",
+			"name": "RemoveProductFromCart",
+			"url": "http://localhost/prog8185w4/api/cart/remove-product.php",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true
+				}
+			]
+		},
+		{
+			"id": "91893feb-a1b4-432d-9d97-ef9f9c604b13",
+			"name": "ReadCartByUserAfterRemovingProduct",
+			"url": "http://localhost/prog8185w4/api/cart/read-user-cart.php/?user=54",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true,
+				"Check that it returns an user": true,
+				"Check that itemCount is correct": true,
+				"Check that product was removed": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that it returns an user": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that itemCount is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that product was removed": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true,
+					"Check that it returns an user": true,
+					"Check that itemCount is correct": true,
+					"Check that product was removed": true
+				}
+			]
+		},
+		{
+			"id": "412e891f-e6f5-4af7-8327-db01bcd735d9",
+			"name": "ClearUserCart",
+			"url": "http://localhost/prog8185w4/api/cart/clear.php/?user=54",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check if Not Found Code is returned": true
+			},
+			"testPassFailCounts": {
+				"Check if Not Found Code is returned": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Check if Not Found Code is returned": true
+				}
+			]
+		},
+		{
+			"id": "61cc7475-5f9a-45ee-ab71-99687369ff46",
+			"name": "ReadCartByUserAfterClearCart",
+			"url": "http://localhost/prog8185w4/api/cart/read-user-cart.php/?user=54",
+			"time": 5,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Check if Not Found Code is returned": true,
+				"Check if No record found is returned": true
+			},
+			"testPassFailCounts": {
+				"Check if Not Found Code is returned": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if No record found is returned": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Check if Not Found Code is returned": true,
+					"Check if No record found is returned": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 125,
+	"collection": {
+		"requests": [
+			{
+				"id": "d3666413-34ad-406e-a026-97b7f349be51",
+				"method": "PUT"
+			},
+			{
+				"id": "099fa622-b7c6-425f-9ddf-b09da0edc944",
+				"method": "GET"
+			},
+			{
+				"id": "ab2fa0db-6c08-4ab0-8e38-01357bec2b6e",
+				"method": "PUT"
+			},
+			{
+				"id": "c4392d0a-c369-4104-b72b-c951c7fa246e",
+				"method": "PUT"
+			},
+			{
+				"id": "9cf18e3e-9ef8-440b-9e40-26a016dd0498",
+				"method": "GET"
+			},
+			{
+				"id": "9dda426b-2abe-4bae-ab48-83861319aeb6",
+				"method": "PUT"
+			},
+			{
+				"id": "d719efb5-289d-4414-9453-c21067d1302d",
+				"method": "PUT"
+			},
+			{
+				"id": "5239e4de-05d8-4c41-aa0f-a9b145bac961",
+				"method": "GET"
+			},
+			{
+				"id": "252178bb-3f5e-46a8-9963-5381721d0b41",
+				"method": "PUT"
+			},
+			{
+				"id": "73d4ccde-874e-443e-8596-427dbcd6f471",
+				"method": "GET"
+			},
+			{
+				"id": "4caf8a7b-fca3-455c-b30d-d192f201304a",
+				"method": "POST"
+			},
+			{
+				"id": "e8ada151-ef1d-4111-9ded-e833acc1014b",
+				"method": "GET"
+			},
+			{
+				"id": "6b2cfb31-4ee9-4ec7-b395-46a22b9f13ae",
+				"method": "DELETE"
+			},
+			{
+				"id": "91893feb-a1b4-432d-9d97-ef9f9c604b13",
+				"method": "GET"
+			},
+			{
+				"id": "412e891f-e6f5-4af7-8327-db01bcd735d9",
+				"method": "DELETE"
+			},
+			{
+				"id": "61cc7475-5f9a-45ee-ab71-99687369ff46",
+				"method": "GET"
+			}
+		]
+	}
+}

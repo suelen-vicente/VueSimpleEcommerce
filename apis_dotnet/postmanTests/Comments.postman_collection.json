@@ -1,0 +1,768 @@
+{
+	"info": {
+		"_postman_id": "a7c1f83b-b19e-4f3c-b089-36a8dea4ca69",
+		"name": "Comments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Setup",
+			"item": [
+				{
+					"name": "CreateUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"User creation was successful\", function () {",
+									"  var jsonData = pm.response.json();",
+									"  pm.environment.set(\"user_id\", jsonData.id);",
+									"  pm.expect(pm.response.code).to.equal(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"USER NAME CREATE\",\n    \"email\": \"user@test.com\",\n    \"password\": \"test\",\n    \"shippingAddress\": \"108 University Avenue, Waterloo, ON, Canada\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{user_url}}",
+							"host": [
+								"{{user_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUser2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"User creation was successful\", function () {",
+									"  var jsonData = pm.response.json();",
+									"  pm.environment.set(\"user_id_2\", jsonData.id);",
+									"  pm.expect(pm.response.code).to.equal(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"USER NAME CREATE 2\",\n    \"email\": \"user2@test.com\",\n    \"password\": \"test2\",\n    \"shippingAddress\": \"108 University Avenue, Waterloo, ON, Canada\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{user_url}}",
+							"host": [
+								"{{user_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateProduct 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Product creation was successful\", function () {",
+									"  var jsonData = pm.response.json();",
+									"  pm.environment.set(\"product_id\", jsonData.id);",
+									"  pm.expect(pm.response.code).to.equal(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"PRODUCT NAME CREATE\",\n    \"description\": \"This is an incredible test!\",\n    \"image\": \"test_product.jpeg\",\n    \"price\": 500,\n    \"shippingCost\": 10,\n    \"brand\": \"Test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product_url}}",
+							"host": [
+								"{{product_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateProduct 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Product creation was successful\", function () {",
+									"  var jsonData = pm.response.json();",
+									"  pm.environment.set(\"product_id_2\", jsonData.id);",
+									"  pm.expect(pm.response.code).to.equal(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"PRODUCT NAME CREATE\",\n    \"description\": \"This is an incredible test!\",\n    \"image\": \"test_product.jpeg\",\n    \"price\": 500,\n    \"shippingCost\": 10,\n    \"brand\": \"Test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product_url}}",
+							"host": [
+								"{{product_url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CreateCommentProduct1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"User creation was successful\", function () {",
+							"  var jsonData = pm.response.json();",
+							"  pm.environment.set(\"comment_id\", jsonData.id);",
+							"  pm.expect(pm.response.code).to.equal(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"product\": {{product_id}},\n    \"user\": {{user_id}},\n    \"rating\":  3,\n    \"image\": \"test.png\",\n    \"text\": \"Great product.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{comments_url}}",
+					"host": [
+						"{{comments_url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCommentProduct2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"User creation was successful\", function () {",
+							"  pm.expect(pm.response.code).to.equal(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"product\": {{product_id_2}},\n    \"user\": {{user_id}},\n    \"rating\":  5,\n    \"image\": \"test2.png\",\n    \"text\": \"Great product 2.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{comments_url}}/create.php",
+					"host": [
+						"{{comments_url}}"
+					],
+					"path": [
+						"create.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCommentProduct1User2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"User creation was successful\", function () {",
+							"  pm.expect(pm.response.code).to.equal(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\": {{product_id}},\n    \"userId\": {{user_id_2}},\n    \"rating\":  3,\n    \"image\": \"test3.png\",\n    \"text\": \"Great product 3.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{comments_url}}",
+					"host": [
+						"{{comments_url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadComments",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Request is successful with a status code of 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Check that it returns an array\", function () {",
+							"  var jsonData = pm.response.json();",
+							"  pm.expect(jsonData).to.be.an(\"array\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{comments_url}}",
+					"host": [
+						"{{comments_url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadCommentsByUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Request is successful with a status code of 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Check that it returns an array\", function () {",
+							"  var jsonData = pm.response.json();",
+							"  pm.expect(jsonData).to.be.an(\"array\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{comments_url}}/user/{{user_id}}",
+					"host": [
+						"{{comments_url}}"
+					],
+					"path": [
+						"user",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadCommentsByProduct",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Request is successful with a status code of 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Check that it returns an array\", function () {",
+							"  var jsonData = pm.response.json();",
+							"  pm.expect(jsonData).to.be.an(\"array\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{comments_url}}/product/{{product_id}}",
+					"host": [
+						"{{comments_url}}"
+					],
+					"path": [
+						"product",
+						"{{product_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadCommentById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Request is successful with a status code of 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Check that it returns an array\", function () {",
+							"  var jsonData = pm.response.json()[\"body\"];",
+							"  pm.expect(jsonData).to.be.an(\"array\");",
+							"});",
+							"",
+							"pm.test(\"Check that itemCount is correct\", function () {",
+							"  var itemCount = pm.response.json()[\"itemCount\"];",
+							"  var jsonData = pm.response.json()[\"body\"];",
+							"  pm.expect(jsonData.length).to.equal(itemCount);",
+							"});",
+							"",
+							"pm.test(\"Check that id returned is correct\", function () {",
+							"  var jsonData = pm.response.json()[\"body\"];",
+							"  pm.expect(parseInt(jsonData[0].id)).to.equal(pm.environment.get(\"comment_id\"));",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{comments_url}}/read.php/?id={{comment_id}}",
+					"host": [
+						"{{comments_url}}"
+					],
+					"path": [
+						"read.php",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{comment_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateComment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"User updated successfully\", function () {",
+							"  pm.expect(pm.response.code).to.be.equal(200);",
+							"});",
+							"",
+							"pm.test(\"Check that id returned is correct\", function () {",
+							"  var jsonData = pm.response.json();",
+							"  pm.expect(parseInt(jsonData.id)).to.equal(pm.environment.get(\"comment_id\"));",
+							"});",
+							"",
+							"pm.test(\"Check that comment was updated correctly\", function () {",
+							"  var jsonData = pm.response.json();",
+							"  pm.expect(jsonData.rating).to.equal(parseInt(pm.environment.get(\"comment_rating_update\")));",
+							"  pm.expect(jsonData.image).to.equal(pm.environment.get(\"comment_image_update\"));",
+							"  pm.expect(jsonData.text).to.equal(pm.environment.get(\"comment_text_update\"));",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rating\":  {{comment_rating_update}},\n    \"image\": \"{{comment_image_update}}\",\n    \"text\": \"{{comment_text_update}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{comments_url}}/{{comment_id}}",
+					"host": [
+						"{{comments_url}}"
+					],
+					"path": [
+						"{{comment_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCommentById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Request is successful with a status code of 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{comments_url}}/delete.php/?id={{comment_id}}",
+					"host": [
+						"{{comments_url}}"
+					],
+					"path": [
+						"delete.php",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{comment_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadCommentByIdAfterDelete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Request returns status code of 204\", function () {",
+							"  pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{comments_url}}/{{comment_id}}",
+					"host": [
+						"{{comments_url}}"
+					],
+					"path": [
+						"{{comment_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCommentByUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Request is successful with a status code of 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{comments_url}}/delete-user.php/?user={{user_id}}",
+					"host": [
+						"{{comments_url}}"
+					],
+					"path": [
+						"delete-user.php",
+						""
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "{{user_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadCommentsByUserAfterDelete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Request returns status code of 404\", function () {",
+							"  pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{comments_url}}/read-user.php/?user={{user_id}}",
+					"host": [
+						"{{comments_url}}"
+					],
+					"path": [
+						"read-user.php",
+						""
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "{{user_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCommentByProduct",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Request is successful with a status code of 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{comments_url}}/delete-product.php/?product={{product_id}}",
+					"host": [
+						"{{comments_url}}"
+					],
+					"path": [
+						"delete-product.php",
+						""
+					],
+					"query": [
+						{
+							"key": "product",
+							"value": "{{product_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadCommentsByProductAfterDelete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Request returns status code of 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{comments_url}}/product/{{product_id}}",
+					"host": [
+						"{{comments_url}}"
+					],
+					"path": [
+						"product",
+						"{{product_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

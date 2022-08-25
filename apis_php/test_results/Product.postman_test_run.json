@@ -1,0 +1,295 @@
+{
+	"id": "4483fe33-9928-4ceb-8ace-3f585e13502d",
+	"name": "Product",
+	"timestamp": "2022-07-06T18:32:40.983Z",
+	"collection_id": "20057135-b632929d-6c4d-4bec-b4aa-59b5b1514669",
+	"folder_id": 0,
+	"environment_id": "20057135-5739fff1-03fe-4f20-aa1b-35ccfeba8c9b",
+	"totalPass": 17,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "14335a8d-60d7-4573-a171-1c3f2c4ceb8c",
+			"name": "CreateProduct",
+			"url": "http://localhost/prog8185w4/api/product/create.php",
+			"time": 9,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Product creation was successful": true
+			},
+			"testPassFailCounts": {
+				"Product creation was successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Product creation was successful": true
+				}
+			]
+		},
+		{
+			"id": "02295cfb-4935-47fe-9593-ce6f01d67e0f",
+			"name": "ReadProducts",
+			"url": "http://localhost/prog8185w4/api/product/read.php",
+			"time": 20,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true,
+				"Check that it returns an array": true,
+				"Check that itemCount is correct": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that it returns an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that itemCount is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				20
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true,
+					"Check that it returns an array": true,
+					"Check that itemCount is correct": true
+				}
+			]
+		},
+		{
+			"id": "b94a2611-6734-448d-be67-7030140ac58b",
+			"name": "ReadProductById",
+			"url": "http://localhost/prog8185w4/api/product/read.php/?id=84",
+			"time": 17,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true,
+				"Check that it returns an array": true,
+				"Check that itemCount is correct": true,
+				"Check that id returned is correct": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that it returns an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that itemCount is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that id returned is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true,
+					"Check that it returns an array": true,
+					"Check that itemCount is correct": true,
+					"Check that id returned is correct": true
+				}
+			]
+		},
+		{
+			"id": "5a0f1a82-2444-4376-ab2e-9f8a2c374572",
+			"name": "UpdateProduct",
+			"url": "http://localhost/prog8185w4/api/product/update.php/?id=84",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Product creation was successful": true
+			},
+			"testPassFailCounts": {
+				"Product creation was successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Product creation was successful": true
+				}
+			]
+		},
+		{
+			"id": "4a76edd1-440e-4362-914e-6eeca91f58ce",
+			"name": "ReadProductByIdAfterUpdate",
+			"url": "http://localhost/prog8185w4/api/product/read.php/?id=84",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true,
+				"Check that it returns an array": true,
+				"Check that itemCount is correct": true,
+				"Check that id returned is correct": true,
+				"Check that name was updated correctly": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that it returns an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that itemCount is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that id returned is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that name was updated correctly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true,
+					"Check that it returns an array": true,
+					"Check that itemCount is correct": true,
+					"Check that id returned is correct": true,
+					"Check that name was updated correctly": true
+				}
+			]
+		},
+		{
+			"id": "ef60753a-bfef-45ea-bb5d-530439139aa3",
+			"name": "DeleteProduct",
+			"url": "http://localhost/prog8185w4/api/product/delete.php/?id=84",
+			"time": 39,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				39
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true
+				}
+			]
+		},
+		{
+			"id": "c56b6888-46f8-45d4-8b45-69562ed6143c",
+			"name": "ReadProductByIdAfterDelete",
+			"url": "http://localhost/prog8185w4/api/product/read.php/?id=84",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Check if Not Found Code is returned": true,
+				"Check if No record found is returned": true
+			},
+			"testPassFailCounts": {
+				"Check if Not Found Code is returned": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if No record found is returned": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Check if Not Found Code is returned": true,
+					"Check if No record found is returned": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 98,
+	"collection": {
+		"requests": [
+			{
+				"id": "14335a8d-60d7-4573-a171-1c3f2c4ceb8c",
+				"method": "PUT"
+			},
+			{
+				"id": "02295cfb-4935-47fe-9593-ce6f01d67e0f",
+				"method": "GET"
+			},
+			{
+				"id": "b94a2611-6734-448d-be67-7030140ac58b",
+				"method": "GET"
+			},
+			{
+				"id": "5a0f1a82-2444-4376-ab2e-9f8a2c374572",
+				"method": "POST"
+			},
+			{
+				"id": "4a76edd1-440e-4362-914e-6eeca91f58ce",
+				"method": "GET"
+			},
+			{
+				"id": "ef60753a-bfef-45ea-bb5d-530439139aa3",
+				"method": "DELETE"
+			},
+			{
+				"id": "c56b6888-46f8-45d4-8b45-69562ed6143c",
+				"method": "GET"
+			}
+		]
+	}
+}

@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "b632929d-6c4d-4bec-b4aa-59b5b1514669",
+		"name": "Product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20057135"
+	},
+	"item": [
+		{
+			"name": "CreateProduct",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Product creation was successful\", function () {",
+							"  var jsonData = pm.response.json();",
+							"  pm.environment.set(\"product_id\", jsonData._id);",
+							"  pm.expect(pm.response.code).to.equal(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"PRODUCT NAME CREATE\",\n    \"brand\": \"Test\",\n    \"description\": \"This is an incredible test!\",\n    \"image\": \"test_product.jpeg\",\n    \"price\": 500,\n    \"shipping_cost\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{product_url}}",
+					"host": [
+						"{{product_url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadProducts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Request is successful with a status code of 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Check that it returns an array\", function () {",
+							"  var jsonData = pm.response.json();",
+							"  pm.expect(jsonData).to.be.an(\"array\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{product_url}}",
+					"host": [
+						"{{product_url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadProductById",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Request is successful with a status code of 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Check that id returned is correct\", function () {",
+							"  var jsonData = pm.response.json();",
+							"  pm.expect(jsonData._id).to.equal(pm.environment.get(\"product_id\"));",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{product_url}}/{{product_id}}",
+					"host": [
+						"{{product_url}}"
+					],
+					"path": [
+						"{{product_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Product creation was successful\", function () {",
+							"    console.log(pm.environment.get(\"product_name\"));",
+							"  pm.expect(pm.response.code).to.be.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"PRODUCT NAME UPDATE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{product_url}}/update.php/?id={{product_id}}",
+					"host": [
+						"{{product_url}}"
+					],
+					"path": [
+						"update.php",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{product_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Request is successful with a status code of 200\", function () {",
+							"  pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{product_url}}/delete.php/?id={{product_id}}",
+					"host": [
+						"{{product_url}}"
+					],
+					"path": [
+						"delete.php",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{product_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadProductByIdAfterDelete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check if Not Found Code is returned\", function () {",
+							"  pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{product_url}}/{{product_id}}",
+					"host": [
+						"{{product_url}}"
+					],
+					"path": [
+						"{{product_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

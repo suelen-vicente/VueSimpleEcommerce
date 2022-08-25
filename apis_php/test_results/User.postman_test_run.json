@@ -1,0 +1,295 @@
+{
+	"id": "ac8954c1-f045-49f8-aa50-766606cfbfc4",
+	"name": "User",
+	"timestamp": "2022-07-06T18:31:51.447Z",
+	"collection_id": "20057135-a8a5c2ca-29e5-4c95-8331-925d635ececc",
+	"folder_id": 0,
+	"environment_id": "20057135-5739fff1-03fe-4f20-aa1b-35ccfeba8c9b",
+	"totalPass": 17,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "21117882-aeaa-46e2-b34c-4f88e9a2e10f",
+			"name": "CreateUser",
+			"url": "http://localhost/prog8185w4/api/user/create.php",
+			"time": 9,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"User creation was successful": true
+			},
+			"testPassFailCounts": {
+				"User creation was successful": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"User creation was successful": true
+				}
+			]
+		},
+		{
+			"id": "8e6c95a5-6181-4cb5-87d1-7e53707dfb72",
+			"name": "ReadUsers",
+			"url": "http://localhost/prog8185w4/api/user/read.php",
+			"time": 17,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true,
+				"Check that it returns an array": true,
+				"Check that itemCount is correct": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that it returns an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that itemCount is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true,
+					"Check that it returns an array": true,
+					"Check that itemCount is correct": true
+				}
+			]
+		},
+		{
+			"id": "f3cb518a-1025-4354-a7cb-64f3e64cab4a",
+			"name": "ReadUserById",
+			"url": "http://localhost/prog8185w4/api/user/read.php/?id=53",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true,
+				"Check that it returns an array": true,
+				"Check that itemCount is correct": true,
+				"Check that id returned is correct": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that it returns an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that itemCount is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that id returned is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true,
+					"Check that it returns an array": true,
+					"Check that itemCount is correct": true,
+					"Check that id returned is correct": true
+				}
+			]
+		},
+		{
+			"id": "905fb829-509c-42b6-bf45-3f47220688f4",
+			"name": "UpdateUser",
+			"url": "http://localhost/prog8185w4/api/user/update.php/?id=53",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"User updated successfully": true
+			},
+			"testPassFailCounts": {
+				"User updated successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"User updated successfully": true
+				}
+			]
+		},
+		{
+			"id": "369a0fba-ecf0-497a-aa97-df54404dcfce",
+			"name": "ReadUserByIdAfterUpdate",
+			"url": "http://localhost/prog8185w4/api/user/read.php/?id=53",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true,
+				"Check that it returns an array": true,
+				"Check that itemCount is correct": true,
+				"Check that id returned is correct": true,
+				"Check that name was updated correctly": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that it returns an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that itemCount is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that id returned is correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check that name was updated correctly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true,
+					"Check that it returns an array": true,
+					"Check that itemCount is correct": true,
+					"Check that id returned is correct": true,
+					"Check that name was updated correctly": true
+				}
+			]
+		},
+		{
+			"id": "65a25b32-74d8-4e5c-9e41-8279ef927cc4",
+			"name": "DeleteUser",
+			"url": "http://localhost/prog8185w4/api/user/delete.php/?id=53",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request is successful with a status code of 200": true
+			},
+			"testPassFailCounts": {
+				"Request is successful with a status code of 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Request is successful with a status code of 200": true
+				}
+			]
+		},
+		{
+			"id": "355008cc-a380-485d-b3d3-f85a71763734",
+			"name": "ReadUserByIdAfterDelete",
+			"url": "http://localhost/prog8185w4/api/user/read.php/?id=53",
+			"time": 4,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Check if Not Found Code is returned": true,
+				"Check if No record found message is returned": true
+			},
+			"testPassFailCounts": {
+				"Check if Not Found Code is returned": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if No record found message is returned": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Check if Not Found Code is returned": true,
+					"Check if No record found message is returned": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 59,
+	"collection": {
+		"requests": [
+			{
+				"id": "21117882-aeaa-46e2-b34c-4f88e9a2e10f",
+				"method": "PUT"
+			},
+			{
+				"id": "8e6c95a5-6181-4cb5-87d1-7e53707dfb72",
+				"method": "GET"
+			},
+			{
+				"id": "f3cb518a-1025-4354-a7cb-64f3e64cab4a",
+				"method": "GET"
+			},
+			{
+				"id": "905fb829-509c-42b6-bf45-3f47220688f4",
+				"method": "POST"
+			},
+			{
+				"id": "369a0fba-ecf0-497a-aa97-df54404dcfce",
+				"method": "GET"
+			},
+			{
+				"id": "65a25b32-74d8-4e5c-9e41-8279ef927cc4",
+				"method": "DELETE"
+			},
+			{
+				"id": "355008cc-a380-485d-b3d3-f85a71763734",
+				"method": "GET"
+			}
+		]
+	}
+}
